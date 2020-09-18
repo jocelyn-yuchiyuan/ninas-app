@@ -10,19 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_16_151756) do
+ActiveRecord::Schema.define(version: 2020_09_18_073239) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "macthings", force: :cascade do |t|
+  create_table "matchings", force: :cascade do |t|
     t.boolean "status"
     t.bigint "pet_id", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["pet_id"], name: "index_macthings_on_pet_id"
-    t.index ["user_id"], name: "index_macthings_on_user_id"
+    t.index ["pet_id"], name: "index_matchings_on_pet_id"
+    t.index ["user_id"], name: "index_matchings_on_user_id"
   end
 
   create_table "pets", force: :cascade do |t|
@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(version: 2020_09_16_151756) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "macthings", "pets"
-  add_foreign_key "macthings", "users"
+  add_foreign_key "matchings", "pets"
+  add_foreign_key "matchings", "users"
   add_foreign_key "pets", "users"
 end

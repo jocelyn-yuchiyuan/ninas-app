@@ -1,0 +1,17 @@
+<div class="container mb-5 py-4">
+  <div class="row justify-content-center">
+    <div class="col-8">
+      <h1 style="text-align: center">Your loved one</h1>
+      <%= simple_form_for(@pet) do |f| %>
+        <%= f.input :name, placeholder: 'e.g. Lucky' %>
+        <%= f.input :profile, placeholder: 'e.g. This beautiful toilet in the center of Harajuku. Take a quick break from shopping to take care of business!' %>
+        <%= f.input :age %>
+        <%= f.input :breed, collection: ["cat", "dog", "bunny"], include_blank: false, include_hidden: false %>
+        <%= f.input :photo, as: :file %>
+        <div class="submit-btn" style="text-align: center;">
+          <%= f.submit class: 'btn btn-pink' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
