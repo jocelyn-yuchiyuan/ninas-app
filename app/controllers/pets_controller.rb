@@ -1,6 +1,6 @@
 class PetsController < ApplicationController
   def index
-    @pet = policy_scope(Pet)
+    @pets = policy_scope(Pet)
 
   end
 
@@ -29,6 +29,6 @@ class PetsController < ApplicationController
   private
 
   def pet_params
-    params.require(:pet).permit(:name, :profile, :breed, :age)
+    params.require(:pet).permit(:name, :profile, :breed, :age, :photo)
   end
 end

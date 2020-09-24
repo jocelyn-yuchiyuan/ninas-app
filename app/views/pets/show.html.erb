@@ -1,9 +1,2 @@
-<% matchings.each do |matching| %>
-  <div class="col-sm-4 mt-3">
-    <% if matching.images.attached? %>
-      <div class="match-tile rounded" data-id="<%= matching.id  %>" style="background-image: url('<%= url_for matching.images.first %>');">
-        <p class="text-white"><%= matching.first_name %></p>
-      </div>
-    <% end %>
-  </div>
-<% end %>
+<!-- <div class="match-tile rounded" data-id="<%= matching.id  %>" style="background-image: url('<%= #url_for matching.images.first %>');"> -->
+<%= @pet.name %>

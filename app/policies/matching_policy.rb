@@ -4,4 +4,13 @@ class MatchingPolicy < ApplicationPolicy
       scope.all
     end
   end
+
+end
+def new?
+  true
+end
+
+def create?
+  true
+end
 end

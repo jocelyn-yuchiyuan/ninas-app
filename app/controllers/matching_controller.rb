@@ -1,1 +1,2 @@
-matching_controller.rb
+class MatchingsController < ApplicationController
+end
