@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require "open-uri"
 Matching.destroy_all
 puts "Seeding something"
 puts "destroying matchings"
@@ -17,8 +18,6 @@ location = ["shibuya","meguro","shinjuku", "gotanda", "mejiro", "ikebukuro", "sh
 breed= ["cat", "dog", "bunny"]
 first_name  = ["John", "Jake", "Melanie", "Jane", "Timothy", "Alfred", "Jessica"]
 last_name = ["Alaska", "Robinson", "Johnson", "Kim", "Yamada", "Balona", "Wen"]
-
-
 
 
 25.times do
@@ -36,6 +35,7 @@ last_name = ["Alaska", "Robinson", "Johnson", "Kim", "Yamada", "Balona", "Wen"]
     breed: breed.sample,
     age: rand(0..15),
     user:  getuser
+    photo: URI.open('https://giantbomb1.cbsistatic.com/uploads/original/9/99864/2419866-nes_console_set.png')
   )
 
 end
