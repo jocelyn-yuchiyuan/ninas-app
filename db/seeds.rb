@@ -19,8 +19,11 @@ breed= ["cat", "dog", "bunny"]
 first_name  = ["John", "Jake", "Melanie", "Jane", "Timothy", "Alfred", "Jessica"]
 last_name = ["Alaska", "Robinson", "Johnson", "Kim", "Yamada", "Balona", "Wen"]
 
+file =  URI.open('https://cdn.pixabay.com/photo/2017/07/25/01/22/cat-2536662_1280.jpg')
+photo = Photo.new(title: 'NES', body: "A great console")
+article.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
-25.times do
+5.times do
   getuser = User.new(
     first_name: first_name.sample,
     last_name: last_name.sample,
@@ -34,8 +37,8 @@ last_name = ["Alaska", "Robinson", "Johnson", "Kim", "Yamada", "Balona", "Wen"]
     profile: "I am cute, nice and the most caring pet ever",
     breed: breed.sample,
     age: rand(0..15),
-    user:  getuser
-    photo: URI.open('https://giantbomb1.cbsistatic.com/uploads/original/9/99864/2419866-nes_console_set.png')
+    user:  getuser,
+    photo: URI.open('https://cdn.pixabay.com/photo/2017/07/25/01/22/cat-2536662_1280.jpg')
   )
 
 end
