@@ -1,16 +1,20 @@
-.banner-container {
-  display: flex;
-
-  background-image:cover;
-  justify-content: space-around;
-  align-items: center;
-
+.banner {
+  background-size: cover;
+  background-position: center center;
+  padding: 150px 0;
+  height: 600px;
+  padding-left: 20px;
+  text-align: center;
 }
 
-
-.banner-content {
-  justify-content: center;
-  text-align: left;
+.banner h2 {
+  font-size: 90px;
+  font-weight: 200;
+  margin: 0.4em 0;
+  color: $black;
+  line-height: 2.2;
+  margin-left: 42px;
+  text-shadow: 2px 1px ;
 }
 
 .banner-title h1 {
